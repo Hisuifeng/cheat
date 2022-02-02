@@ -168,8 +168,12 @@
 <p class="overlay-description">以下内容可能不适合<b>未满18岁<b>的人群观看，我们需要确认您的年龄。</p>
 <p class="overlay-description">The following may not be suitable for people <b>under the age of 18</b>and we need to confirm your age.</p>
 <div class="overlay-buttons-wrapper">
-<div id="accept-button" class="overlay-button">已满18岁</div>
+<a href="http://win.web.nf03.sycdn.kuwo.cn/7401cd61c80246ead9a782a4298ca98b/61faa3b1/resource/m2/55/28/2433153218.mp4">
+<div id="accept-button" class="overlay-button" href="https://www.bilibili.com/video/BV1GJ411x7h7?from=search&seid=3418594587235946251&spm_id_from=333.337.0.0">已满18岁</div>
+</a>
+<a href="http://win.web.nf03.sycdn.kuwo.cn/7401cd61c80246ead9a782a4298ca98b/61faa3b1/resource/m2/55/28/2433153218.mp4">
 <div id="decline-button" class="overlay-button">未满18岁</div>
+</a>
 </div>
 <a href="https://www.bilibili.com/video/BV1GJ411x7h7?from=search&seid=3418594587235946251&spm_id_from=333.337.0.0" target="_blank" class="overlay-link">隐私政策</a>
 </div>
@@ -179,40 +183,5 @@
 <source src="./video/video.mp4" type="video/mp4">
 </video>
 </div>
-<script type="text/javascript">
-            const video = document.getElementById("video");
-            const overlay = document.getElementById("overlay");
-            const declineButton = document.getElementById("decline-button");
-            const acceptButton = document.getElementById("accept-button");
-
-            let hasClicked;
-
-            window.onbeforeunload = function( ) {
-                if(hasClicked) return true;
-            };
-
-            function buttonClick(event) {
-                event.preventDefault();
-                if(!hasClicked) hasClicked = true;
-                overlay.hidden = true;
-                video.play();
-                videoClick();
-            }
-
-            function videoClick(event) {
-                if(event) event.preventDefault();
-                // if not fullscreen
-                const { documentElement } = document;
-                if(documentElement.requestFullscreen) documentElement.requestFullscreen();
-                else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
-                else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
-                else if(documentElement.msRequestFullscreen) documentElement.msRequestFullscreen();
-            }
-
-            acceptButton.addEventListener("click", buttonClick);
-            declineButton.addEventListener("click", buttonClick);
-            video.addEventListener("click", videoClick);
-        </script>
-
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script></body>
